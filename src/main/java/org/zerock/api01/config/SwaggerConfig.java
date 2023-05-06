@@ -1,6 +1,7 @@
 package org.zerock.api01.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -15,6 +16,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 import java.util.List;
 
+@Configuration
 public class SwaggerConfig {
 
     @Bean
