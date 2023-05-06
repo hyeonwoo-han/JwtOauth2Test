@@ -49,7 +49,7 @@ public class JWTUtil {
         return jwtStr;
     }
 
-    // JWT 문자열 검증
+    // JWT 문자열 검증: JWT 안에 담긴 내용 확인
     public Map<String, Object> validateToken(String token) throws JwtException {
 
         Map<String, Object> claim = null;
