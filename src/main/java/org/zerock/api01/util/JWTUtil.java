@@ -34,7 +34,7 @@ public class JWTUtil {
         payloads.putAll(valueMap);
 
         // 테스트는 편의를 위해 분단위로 설정 -> 나중에 60*24 일단위 변경
-        int time = (60 * 24) * days;
+        int time = (60 * 24) * days;  // 다시 하루로 설정
 
         // JWT 문자열 생성
         String jwtStr = Jwts.builder()
@@ -54,7 +54,7 @@ public class JWTUtil {
 
         Map<String, Object> claim = null;
 
-        // parser()로 실세로 검증 처리: key를 넣고 복호화 후 claim의 body 부분 반환
+        // parser()로 실세로 검증 처리: key를 넣고 복호화 후 payload 의 body 부분 반환
         claim = Jwts.parser()
                 .setSigningKey(key.getBytes())  // set key
                 .parseClaimsJws(token)  // 파싱 및 검증, 실패 시 에러

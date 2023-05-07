@@ -21,8 +21,8 @@
   const oldRefreshToken = localStorage.getItem("refreshToken");
 
   // 오래된 토큰들을 화면에 표시
-  document.querySelector(".accessOld").innerHTML = 'OLD' + oldAccessToken;
-  document.querySelector(".refreshOld").innerHTML = 'OLD' + oldRefreshToken;
+  document.querySelector(".accessOld").innerHTML = 'OLD ' + oldAccessToken;
+  document.querySelector(".refreshOld").innerHTML = 'OLD ' + oldRefreshToken;
 
   // 버튼 이벤트 리스너
   document.querySelector(".btn1").addEventListener("click", () => {

@@ -53,7 +53,7 @@ public class TokenCheckFilter extends OncePerRequestFilter {
     // 토큰 검증하고 예외 발생시 AccessTokenException 던지기
     private Map<String, Object> validateAccessToken(HttpServletRequest request) throws AccessTokenException{
         
-        // reuqest 헤더에서 Authorization 추출
+        // reuqest 헤더에서 Authorization 값 (AccessToken) 추출
         String headerStr = request.getHeader("Authorization");
         
         // Authorization 값이 없다 ->  토큰이 없다 -> UNACCEPT 에러
